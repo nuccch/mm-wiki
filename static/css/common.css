@@ -554,6 +554,9 @@ mark {
 
 .page-view-dir-toc .toc {
     padding: 10px 20px 10px 0;
+    /* 导航栏设置指定高度，并添加滚动条，避免因为目录过多而无法显示全 */
+    height: 668px;
+    overflow: auto;
 }
 
 /* 目录只显示单行, 多的文字使用title, 但感觉不太合理, 暂时不要 */
