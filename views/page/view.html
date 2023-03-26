@@ -140,18 +140,28 @@
         // 目录显示与隐藏
         $(".dir-preview-btn").click(function () {
             var pageViewDirToc = $(".page-view-dir-toc");
-            if (this.innerText === "展开目录") {
+            if (this.innerText === "隐藏目录") {
+                this.innerText = "展开目录";
+                pageViewDirToc.hide();
+            } else {
                 this.innerText = "隐藏目录";
                 pageViewDirToc.show();
                 pageViewDirToc.css({
                     position: "absolute",
                     top: "25px",
                     right: 0
-                })
-            } else {
-                this.innerText = "展开目录";
-                pageViewDirToc.hide();
+                });
             }
-        })
+        });
+
+        // 默认显示导航栏
+        $(".dir-preview-btn").innerText = "隐藏目录";
+        var pageViewDirToc = $(".page-view-dir-toc");
+        pageViewDirToc.show();
+        pageViewDirToc.css({
+            position: "absolute",
+            top: "25px",
+            right: 0
+        });
     });
 </script>
